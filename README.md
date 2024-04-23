@@ -77,3 +77,71 @@ The primary data source for the provided codebase is the collection of web docum
 Additionally, the code relies on external libraries and packages for various functionalities. The Scrapy library facilitates web crawling by providing tools for fetching pages, parsing HTML content, and following links. It allows users to specify parameters such as maximum pages and depth to control the crawling process. Scikit-Learn is utilized for document indexing and similarity calculations, offering algorithms like TF-IDF for constructing the inverted index and cosine similarity for ranking search results. Flask is employed for building the query processor, enabling users to submit queries and retrieve search results through a web interface. Lastly, NLTK may be used for text preprocessing and query expansion, enhancing search accuracy and relevance.
 
 In summary, the primary data source for the project is the collection of web documents obtained through crawling. External libraries and packages such as Scrapy, Scikit-Learn, Flask, and NLTK contribute to various functionalities such as web crawling, indexing, query processing, and text analysis. These data sources collectively enable the development of a robust and effective information retrieval system capable of efficiently searching and retrieving relevant content from web documents.
+# TEST CASES
+
+The test cases section outlines the methodologies employed to validate the functionality and reliability of the system. It discusses the selection of test cases, the criteria for evaluating success, and the framework used for testing. The section underscores the importance of rigorous testing in ensuring the quality and robustness of the system.
+
+<img width="468" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/5437eda2-f635-4f91-ab33-b57b766fe47b">
+
+The above screenshot shows the terminal while executing.
+# SOURCE CODE
+
+## Crawler
+
+The Crawler module of our Data Recovery Framework is a fundamental tool for gathering web documents in HTML format. Utilizing Scrapy, this tool provides essential capabilities for accurate data acquisition.
+
+<img width="472" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/6ef9dccc-d3e9-4997-b154-338d058c8bff">
+
+#Figure 1: Defining Myspider (Crawler)
+
+During the initialization handle, the crawler permits clients to input certain settings, just like the seed URL, the maximum number of pages to crawl, and the most extreme depth for navigating links. This enables the execution of customized crawling methodologies that are well-suited to meet one-of-a-kind data recovery necessities (Hossain et al., 2024). In expansion, it gives bolster for concurrent crawling, progressing effectiveness through AutoThrottle strategies and empowering disseminated slithering with scraped, permitting for versatility in large-scale information collecting exercises.
+
+<img width="472" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/4425d9da-d7f5-446d-9474-484be359a5dd">
+
+#Figure 2: Defining start request
+
+During the process of crawling, the crawler methodically navigates over web pages, starting from the seed URL. The framework recovers pertinent data from each page, encompassing titles and textual content within paragraphs, to ensure a thorough representation of the required subject area. In this way, the information is organized and saved for subsequent analysis.
+
+<img width="472" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/e1a9abe9-180a-4be0-81a7-06229c716a45">
+
+#Figure 3: Defining the condition
+
+In order to avoid perpetual crawling and guarantee optimal execution, the crawler uses strategies to confine the number of pages crept and the degree of traversal. This ensures that the crawler concentrates on related substances within a feasible run, hence avoiding unnecessary utilization of resources.
+
+The crawler part plays a vital part in getting data for the Data Retrieval Framework (Monterrubio et al., 2021). The software's capable features, such as the ability to customize crawling parameters, perform multiple tasks simultaneously, and lay down certain boundaries on the relevance of web document recovery, enable users to effectively gather web pages for future querying and analysis operations.
+
+## Indexer
+
+The Indexer part of the Data Retrieval Framework plays a crucial role in enabling powerful and accurate search capabilities. The Indexer is a software tool that utilizes the Scikit-Learn library to form a modified index. This index is constructed using the Term Frequency-Inverse Document Frequency (TF-IDF) scheme, which allows efficient document indexing and retrieval.
+
+<img width="401" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/36a45e05-a7be-4195-bce1-6c3521c1c6fd">
+
+#Figure 4: Defining Indexer class
+
+When the Indexer is created, it sets up a TF-IDF vectorizer, which is a tool that transforms text documents into numerical feature vectors by considering the frequency of terms within the corpus of documents (Costola et al., 2023). The process of vectorization enables the assessment of the importance of each term in a document relative to the entire collection of documents, making it easier to compute similarity scores between queries and documents.
+
+<img width="431" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/acf08d6f-a37a-45cf-8ac3-34c153cfe8e5">
+
+#Figure 5: Defining cosine_sim
+
+The primary role of the Indexer is to create and manipulate the modified index. The Indexer uses the TF-IDF vectorizer to create a sparse matrix that represents the document collection. Each row in the matrix represents a document, and each column represents a unique term within the corpus. This matrix serves as the basis for calculating cosine similarity scores between queries and documents, facilitating the effective retrieval of relevant materials based on query terms.
+
+<img width="413" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/e2c99b38-6d43-4542-9db0-746fa329b63b">
+
+#Figure 6: Loading the index with an example query
+
+The Indexer offers strategies for protecting and recovering file information, empowering long-term conservation and recovery of the record. This includes ensuring that the ordering handle can be executed once and after that used for numerous look questions, thus making strides in proficiency and limiting computational burden.
+
+<img width="472" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/a34436bc-ba13-4196-a7e0-b366732c9798">
+
+#Figure 7: Output of the Indexer query
+
+The Indexer component is pivotal within the Information Recovery Framework because it offers a solid and compelling strategy for ordering reports and empowering exact look capabilities by calculating TF-IDF-based similarity scores (Rahman et al., 2023). The integration of this framework with the bigger system permits for easy recovery of germane records in reaction to client requests, thus progressing the in general client involvement and value of the framework.
+## Processor
+The Processor component of our Data Retrieval System capacities as the interface for overseeing free-text inquiries and recovering related records from the recorded collection. Created on Flask, it gives a coordinated HTTP-based interface for questioning and taking care of client inquiries.
+
+
+
+
+
+
