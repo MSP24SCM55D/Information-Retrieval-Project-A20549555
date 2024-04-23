@@ -153,5 +153,43 @@ When the Processor gets an inquiry in JSON arrange, it confirms the input and ex
 In arrange to make strides in the exactness of looks, the Processor joins an inquiry extension component that utilizes WordNet, an English lexical database. This strategy improves the introductory inquiry by counting equivalent words obtained from WordNet, expanding the look run, and expanding the likelihood of obtaining relevant reports.
 
 
+<img width="435" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/49232408-7abd-4df6-b2de-f315baa3efd4">
+
+#Figure 10: Calculating cosine similarity
+
+The Processor delivers the top-K-ranked results to the client, enclosed in a JSON reaction (Costola et al., 2023). Each result contains the substance of the archive and its related score of similitude, which makes it less demanding and faster for the user to assess and show look comes about.
+
+
+<img width="402" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/83de3bb3-ace9-478b-a742-1f404ba00a71">
+
+#Figure 11: Defining expanding query
+Although the existing arrangement is successful for inquiry handling, there are openings for extra upgrades (Urchs et al., 2020). Future modifications ought to organize advancing speed to effortlessly handle bigger record collections, create advanced positioning algorithms, and update the client involvement with highlights such as spell correction and query recommendations.
+
+<img width="446" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/52f73853-2574-4c85-87f4-c623790cf580">
+
+#Figure 13: Running flask on http://127.0.0.1:5000
+
+The Processor component is significant in connecting client questions with the fundamental archive corpus, giving an adaptable and user-friendly strategy for recovering data inside the system.
+Code:
+#crawler.py
+
+<img width="462" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/56b4af13-90c8-4a0e-ad94-a77b82943400">
+
+#Indexer.py
+
+<img width="420" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/612fcc2b-539d-4c93-a7e0-298a65df0152">
+
+#Processor.py
+
+<img width="422" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/b4adb945-ebb6-43a0-af11-06438f1af683">
+
+# BIBILIOGRAPHY
+
+1. Costola, M., Hinz, O., Nofer, M. and Pelizzon, L., 2023. Machine learning sentiment analysis, COVID-19 news and stock market reactions. Research in international business and finance, 64, p.101881.
+2. Hossain, M.R., Hoque, M.M., Siddique, N. and Dewan, M.A.A., 2024. AraCovTexFinder: Leveraging the transformer-based language model for Arabic COVID-19 text identification. Engineering Applications of Artificial Intelligence, 133, p.107987.
+3. Monterrubio, S.M.M., Naranjo, J.E.A., López, L.I.B. and Caraguay, Á.L.V., 2021, March. Black Widow Crawler for TOR network to search for criminal patterns. In 2021 Second International Conference on Information Systems and Software Technologies (ICI2ST) (pp. 108-113). IEEE.
+4. Rahman, M., 2023. Query Search VS ChatAI:: The nature of users’ discourse of two search paradigms.
+5. Urchs, S. and Kosch, M.G.P.D.H., 2020. Extracting definition and subsumption from german law (Doctoral dissertation, Master’s thesis).
+
 
 
