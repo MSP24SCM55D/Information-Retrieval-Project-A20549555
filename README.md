@@ -140,7 +140,17 @@ The Indexer component is pivotal within the Information Recovery Framework becau
 ## Processor
 The Processor component of our Data Retrieval System capacities as the interface for overseeing free-text inquiries and recovering related records from the recorded collection. Created on Flask, it gives a coordinated HTTP-based interface for questioning and taking care of client inquiries.
 
+<img width="454" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/3caaed66-31ac-407c-9224-7d6c413c7e03">
 
+#Figure 8: Defining flask
+
+When the Processor gets an inquiry in JSON arrange, it confirms the input and extricates the inquiry string alongside any discretionary parameters, such as the required number of comes about (top-K). Next, the framework uses a TF-IDF vectorizer to change the inquiry into a numerical organization that's congruous with the recorded records (Urchs et al., 2020). In expansion, the Processor utilizes cosine similitude to calculate the significance scores between the inquiry vector and the TF-IDF framework of the report collection.
+
+<img width="344" alt="image" src="https://github.com/MSP24SCM55D/Information-Retrieval-Project-A20549555/assets/164919823/8bd64008-93b7-462d-8c35-2bccfecd5f84">
+
+#Figure 9: Defining TF-IDF vectorizer
+
+In arrange to make strides in the exactness of looks, the Processor joins an inquiry extension component that utilizes WordNet, an English lexical database. This strategy improves the introductory inquiry by counting equivalent words obtained from WordNet, expanding the look run, and expanding the likelihood of obtaining relevant reports.
 
 
 
